@@ -1,0 +1,12 @@
+#!/bin/bash
+# script/update: Compile presentation files
+
+set -e      # fail fast
+# set -x    # debug
+
+root=$(cd $(dirname $0); cd ..; pwd)
+
+$root/script/bootstrap
+
+echo "==> Running grunt tasks..."
+grunt

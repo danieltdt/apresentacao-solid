@@ -1,0 +1,10 @@
+#!/bin/bash
+# script/update: Installs presentation dependencies
+
+set -e      # fail fast
+# set -x    # debug
+
+root=$(cd $(dirname $0); cd ..; pwd)
+
+echo "==> Installing dependencies"
+npm install

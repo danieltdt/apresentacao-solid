@@ -1,1 +1,12 @@
-ruby -run -ehttpd . -p8000
+#!/bin/bash
+# script/server <port>: Launch presentation web server
+port=${1:-8000}
+
+set -e      # fail fast
+# set -x    # debug
+
+root=$(cd $(dirname $0); cd ..; pwd)
+
+$root/script/update
+
+grunt serve --port $port
